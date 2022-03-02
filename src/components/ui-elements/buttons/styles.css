@@ -1,0 +1,20 @@
+.icon-btn {
+    display: block;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.clock-control-icon {
+    height: 50px;
+    width: 50px;
+    background-color: #fff;
+}
+
+.play {
+    mask-image: url("../../../assets/icons/playButton.svg");
+}
+
+.pause {
+    mask-image: url("../../../assets/icons/pauseButton.svg");
+}
