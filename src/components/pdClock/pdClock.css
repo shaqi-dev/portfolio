@@ -1,14 +1,22 @@
+.pet-project__title {
+    font-size: 3.2rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 6rem;
+}
+
 .pomodoro-app {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 5rem;
-    margin: 20rem auto;
-    height: 40rem;
-    width: 80rem;
+    gap: 6rem;
 }
 
 .pd-timer {
+    background-color: var(--ocean-semi-dark);
+    padding: 2rem;
+    border: solid var(--ocean-dark) 1px;
+    border-radius: 5rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -17,29 +25,26 @@
 }
 
 .pd-timer__circle {
-    display: inline;
-    height: 30rem;
-    width: 30rem;
+    height: 25rem;
+    width: 25rem;
 }
 
 .pd-timer__value {
-    color: var(--primary-light);
-    position: relative;
-    font-size: 8rem;
+    color: var(--ocean-light);
+    font-size: 6.4rem;
     font-weight: 700;
 }
 
 .pd-timer__message {
-    color: var(--primary-light);
-    font-size: 3.2rem;
-    font-weight: 300;
+    color: var(--ocean-light);
+    font-size: 2.4rem;
     position: absolute;
-    top: 5rem;
+    top: 4rem;
 }
 
 .pd-timer__control {
     position: absolute;
-    bottom: 4rem;
+    bottom: 3.5rem;
 }
 
 .pd-settings {
@@ -51,20 +56,24 @@
 .time-settings {
     display: flex;
     flex-direction: column;
-    gap: 4rem;
+    gap: 2rem;
 }
 
 .time-settings__headline {
-    font-size: 3.2rem;
-    font-weight: 300;    
+    color: var(--ocean-disabled-text);
+    font-family: var(--fira);
+    font-size: 1.6rem;
+    font-weight: 500;
 }
 
 .time-inputs {
     display: flex;
-    gap: 4rem;
+    flex-direction: column;
+    gap: 1rem;
 }
 
 .time-settings__button {
-    width: 20rem;
+    margin-top: 2rem;
+    width: 17rem;
     align-self: left;
 }

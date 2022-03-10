@@ -36,3 +36,12 @@
     transform: rotate(360deg);
   }
 }
+
+.section-title {
+  font-family: var(--fira);
+  font-size: 3.2rem;
+  margin-bottom: 10rem;
+} span {
+  font-weight: 400;
+  color: var(--ocean-accent);
+}

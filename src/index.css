@@ -1,10 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;700&family=Roboto:wght@300;400;500;700&display=swap');
 
 html {
   font-size: 62.5%;
   }
 
 :root {
+  --ocean-primary: #8892b0;
+  --ocean-accent: #00ffbb;
+  --ocean-red: #fa8f7e;
+  --ocean-accent-10: rgba(0, 255, 187, 0.1);
+  --ocean-bg: #0C2131;
+  --ocean-dark: #051218;
+  --ocean-semi-dark: #0D1A24;
+  --ocean-light: #cadbe9;
+  --ocean-disabled: #3C5265;
+  --ocean-disabled-text: #88949e; 
   --primary-light: #FFFFFF;
   --secondary-light: #E3E3E3;
   --disabled-light: #bbbbbb;
@@ -13,22 +23,38 @@ html {
   --disabled-dark: #242424;
   --disabled-dark-text: #505050;
   --focus: #87A5E4;
+  --fira: 'Fira Code', monospace;
+  --roboto: 'Roboto', sans-serif;
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto', sans-serif, 'Fira Code', monospace;
   font-weight: 300;
   font-size: 2.4rem;
-  color: var(--primary-light);
+  background-color: var(--ocean-bg);
+  color: var(--ocean-primary);
   box-sizing: border-box;
-  background-color: var(--primary-dark);
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
+h1, h2, h3, h4, h5 {
+  color: var(--ocean-light);
+  margin: 0;
+}
+
 .container {
   width: 144rem;
+  margin: 0 auto;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 150px 0;
+  max-width: 1000px;
   margin: 0 auto;
 }
 

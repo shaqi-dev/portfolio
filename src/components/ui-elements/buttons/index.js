@@ -1,9 +1,9 @@
 import PauseButton from "./pauseButton";
 import PlayButton from "./playButton";
-import PrimaryButton from "./primaryButton";
+import SecondaryButton from "./secondaryButton";
 
 export {
     PauseButton,
     PlayButton,
-    PrimaryButton
+    SecondaryButton
 } ;

@@ -6,9 +6,9 @@
 }
 
 .clock-control-icon {
-    height: 3.8rem;
-    width: 3.8rem;
-    background-color: var(--primary-light);
+    height: 3.2rem;
+    width: 3.2rem;
+    background-color: var(--ocean-light);
 }
 
 .play {
@@ -19,25 +19,25 @@
     mask-image: url("../../../assets/icons/pauseButton.svg");
 }
 
-.primary-button {
-    padding: 1rem 1.5rem;
-    border: none;
-    border-radius: 0.4rem;
-    background-color: var(--primary-light);
-    font-size: 2rem;
+.secondary-button {
+    font-family: var(--fira);
+    padding: 0.8rem 1.2rem;
+    border-radius: 0.3rem;
+    background-color: transparent;
+    font-size: 1.6rem;
     font-weight: 400; 
-    color: var(--primary-dark);
+    color: var(--ocean-accent);
+    border: solid var(--ocean-accent) 1px;
     cursor: pointer; 
     transition: all 80ms ease;
 }
 
-.primary-button:disabled {
+.secondary-button:disabled {
     background-color: var(--disabled-light);
     color: var(--disabled-dark-text);
     cursor: default; 
 }
 
-.primary-button:hover:not([disabled]) {
-    background-color: var(--secondary-light);
-    color: var(--secondary-dark);
+.secondary-button:hover:not([disabled]) {
+    background-color: var(--ocean-accent-10);
 }

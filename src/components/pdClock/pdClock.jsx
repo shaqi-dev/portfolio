@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-comment-textnodes */
 import React, { useState, useEffect } from "react";
 import "./pdClock.css";
 import {
@@ -5,7 +6,7 @@ import {
 	buildStyles,
 } from "react-circular-progressbar";
 import "../../../node_modules/react-circular-progressbar/dist/styles.css";
-import { PlayButton, PauseButton, PrimaryButton } from "../ui-elements/buttons";
+import { PlayButton, PauseButton, SecondaryButton } from "../ui-elements/buttons";
 import PdTimeInput from "../ui-elements/inputs/pdTimeInput";
 
 function PdClock() {
@@ -71,9 +72,7 @@ function PdClock() {
 		return seconds < 10 ? `0${seconds}` : seconds;
 	}
 
-	useEffect(() => {
-		startTimer();
-	}, [timerSeconds]);
+	useEffect(() => startTimer());
 
 	let interval;
 
@@ -146,7 +145,8 @@ function PdClock() {
 	}
 
 	return (
-		<div className="container">
+		<>
+			<h3 className="pet-project__title">Pomodoro Timer</h3>
 			<div className="pomodoro-app">
 				<div className="pd-timer">
 					<div
@@ -158,8 +158,8 @@ function PdClock() {
 							strokeWidth={1}
 							styles={buildStyles({
 								strokeLinecap: "butt",
-								pathColor: "var(--primary-light)",
-								trailColor: "var(--disabled-dark)",
+								pathColor: "var(--ocean-accent)",
+								trailColor: "var(--ocean-disabled)",
 							})}>
 							{displayMessage && (sessionStatus || breakStatus) && (
 								<span className="pd-timer__message">{displayMessage}</span>
@@ -176,7 +176,7 @@ function PdClock() {
 				<div className="pd-settings">
 					<div className="time-settings">
 						<span className="time-settings__headline">
-							Set length (minutes):
+							// Set length in minutes
 						</span>
 						<div className="time-inputs">
 							<PdTimeInput
@@ -204,15 +204,15 @@ function PdClock() {
 								}}
 							/>
 						</div>
-						<PrimaryButton
+						<SecondaryButton
 							type="reset"
 							className="time-settings__button"
 							onClick={inputsDisabled ? setInitialState : onClickPlay}
-							text={inputsDisabled ? "Reset settings" : "Start Timer"}/>
+							text={inputsDisabled ? "resetTimer()" : "startTimer()"}/>
 					</div>
 				</div>
 			</div>
-		</div>
+		</>
 	);
 }
 
