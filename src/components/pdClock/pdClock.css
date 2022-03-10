@@ -2,11 +2,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 50px;
-    margin: 200px auto;
-    height: 400px;
-    width: 800px;
-    /* border: 1px #00c3ff71 solid;   */
+    gap: 5rem;
+    margin: 20rem auto;
+    height: 40rem;
+    width: 80rem;
 }
 
 .pd-timer {
@@ -14,48 +13,58 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
+    cursor: pointer; 
 }
 
 .pd-timer__circle {
     display: inline;
-    height: 300px;
-    width: 300px;
+    height: 30rem;
+    width: 30rem;
 }
 
 .pd-timer__value {
+    color: var(--primary-light);
+    position: relative;
+    font-size: 8rem;
+    font-weight: 700;
+}
 
-    font-size: 80px;
-    font-weight: 500;
+.pd-timer__message {
+    color: var(--primary-light);
+    font-size: 3.2rem;
+    font-weight: 300;
+    position: absolute;
+    top: 5rem;
 }
 
 .pd-timer__control {
-    margin-top: 30px;
-    display: flex;
-    gap: 20px;
+    position: absolute;
+    bottom: 4rem;
 }
 
 .pd-settings {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 4rem;
 }
 
-.pd-settings__headline {
-    font-size: 32px;
+.time-settings {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
 }
 
-.pd-settings__input-label {
-    font-size: 18px;
-    color: rgba(255, 255, 255, 0.7)
+.time-settings__headline {
+    font-size: 3.2rem;
+    font-weight: 300;    
 }
 
-.pd-settings__input {
-    padding: 10px 15px;
-    background-color: rgba(255, 255, 255, 0.05);
-    font-size: 20px;
-    color: #fff;
-    width: 50px;
-    border: none;
-    border-radius: 4px;
-} 
+.time-inputs {
+    display: flex;
+    gap: 4rem;
+}
+
+.time-settings__button {
+    width: 20rem;
+    align-self: left;
+}

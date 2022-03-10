@@ -6,9 +6,9 @@
 }
 
 .clock-control-icon {
-    height: 50px;
-    width: 50px;
-    background-color: #fff;
+    height: 3.8rem;
+    width: 3.8rem;
+    background-color: var(--primary-light);
 }
 
 .play {
@@ -17,4 +17,27 @@
 
 .pause {
     mask-image: url("../../../assets/icons/pauseButton.svg");
+}
+
+.primary-button {
+    padding: 1rem 1.5rem;
+    border: none;
+    border-radius: 0.4rem;
+    background-color: var(--primary-light);
+    font-size: 2rem;
+    font-weight: 400; 
+    color: var(--primary-dark);
+    cursor: pointer; 
+    transition: all 80ms ease;
+}
+
+.primary-button:disabled {
+    background-color: var(--disabled-light);
+    color: var(--disabled-dark-text);
+    cursor: default; 
+}
+
+.primary-button:hover:not([disabled]) {
+    background-color: var(--secondary-light);
+    color: var(--secondary-dark);
 }

@@ -1,0 +1,33 @@
+.pd-time-input {
+    display: flex;
+    align-items: center;
+}
+
+.input__input {
+    padding: 10px 15px;
+    background-color: var(--primary-light);
+    color: var(--primary-dark);
+    text-align: center; 
+    font-size: 20px;
+    width: 32px;
+    border: none;
+    border-radius: 4px;
+}
+
+.input__input:disabled {
+    background-color: var(--disabled-light);
+    color: var(--disabled-dark-text);
+}
+
+.input__input:focus {
+    outline: solid var(--focus) 2px;
+}
+
+.input__label {
+    margin-right: 20px;
+    font-size: 20px;
+    color: var(--primary-light);
+    
+}.disabled {
+    color: var(--disabled-light);
+}

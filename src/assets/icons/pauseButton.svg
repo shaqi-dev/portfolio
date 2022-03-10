@@ -1,11 +1,7 @@
-<svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="512"
-    height="512"
-    enableBackground="new 0 0 512 512"
-    viewBox="0 0 327 327">
-    <path
-        xmlns="http://www.w3.org/2000/svg"
-        d="M158 0h71a8 8 0 018 8v311a8 8 0 01-8 8h-71a8 8 0 01-8-8V8a8 8 0 018-8zm0 0M8 0h71a8 8 0 018 8v311a8 8 0 01-8 8H8a8 8 0 01-8-8V8a8 8 0 018-8zm0 0"
-        data-original="#000000"></path>
+<svg width="327" height="327" xmlns="http://www.w3.org/2000/svg" enableBackground="new 0 0 512 512">
+
+ <g>
+  <title>Layer 1</title>
+  <path id="svg_2" data-original="#000000" d="m203,0l71,0a8,8 0 0 1 8,8l0,311a8,8 0 0 1 -8,8l-71,0a8,8 0 0 1 -8,-8l0,-311a8,8 0 0 1 8,-8zm0,0m-150,0l71,0a8,8 0 0 1 8,8l0,311a8,8 0 0 1 -8,8l-71,0a8,8 0 0 1 -8,-8l0,-311a8,8 0 0 1 8,-8zm0,0" xmlns="http://www.w3.org/2000/svg"/>
+ </g>
 </svg>

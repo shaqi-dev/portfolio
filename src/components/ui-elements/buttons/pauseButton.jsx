@@ -2,7 +2,7 @@ import './styles.css';
 
 function PauseButton(props) {
 	return (
-		<button {...props} className={'icon-btn'}>
+		<button className={'icon-btn'} {...props}>
             <div className='svg-icon clock-control-icon pause'></div>
 		</button>
 	);
