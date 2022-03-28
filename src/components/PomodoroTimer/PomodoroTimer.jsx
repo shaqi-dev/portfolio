@@ -1,19 +1,25 @@
 /* eslint-disable react/jsx-no-comment-textnodes */
 import React, { useState, useEffect } from "react";
-import "./pdClock.css";
+import "./PomodoroTimer.css";
 import {
 	CircularProgressbarWithChildren,
 	buildStyles,
 } from "react-circular-progressbar";
 import "../../../node_modules/react-circular-progressbar/dist/styles.css";
-import { PlayButton, PauseButton, SecondaryButton } from "../ui-elements/buttons";
-import PdTimeInput from "../ui-elements/inputs/pdTimeInput";
+import {
+	PlayButton,
+	PauseButton,
+	SecondaryButton,
+} from "../ui-elements/buttons";
+import { Input } from "../ui-elements/forms";
 
-function PdClock() {
+function PomodoroTimer() {
 	const sessionMinutesDefault = 25,
 		breakMinutesDefault = 5;
 
-	const [sessionMinutesSaved, setSessionMinutesSaved] = useState(sessionMinutesDefault),
+	const [sessionMinutesSaved, setSessionMinutesSaved] = useState(
+			sessionMinutesDefault
+		),
 		[breakMinutesSaved, setBreakMinutesSaved] = useState(breakMinutesDefault),
 		[sessionMinutes, setSessionMinutes] = useState(sessionMinutesSaved),
 		[sessionSeconds, setSessionSeconds] = useState(0),
@@ -145,75 +151,78 @@ function PdClock() {
 	}
 
 	return (
-		<>
-			<h3 className="pet-project__title">Pomodoro Timer</h3>
-			<div className="pomodoro-app">
-				<div className="pd-timer">
-					<div
-						className="pd-timer__circle"
-						onClick={pauseStatus ? onClickPlay : onClickPause}>
-						<CircularProgressbarWithChildren
-							maxValue={totalTime}
-							value={timeRemaining}
-							strokeWidth={1}
-							styles={buildStyles({
-								strokeLinecap: "butt",
-								pathColor: "var(--ocean-accent)",
-								trailColor: "var(--ocean-disabled)",
-							})}>
-							{displayMessage && (sessionStatus || breakStatus) && (
-								<span className="pd-timer__message">{displayMessage}</span>
-							)}
-							<span className="pd-timer__value">
-								{timerMinutes()}:{timerSeconds()}
-							</span>
-							<div className="pd-timer__control">
-								{pauseStatus ? <PlayButton /> : <PauseButton />}
-							</div>
-						</CircularProgressbarWithChildren>
+		<div className="pomodoro-app">
+			<div
+				className="pomodoro-app__timer"
+				onClick={pauseStatus ? onClickPlay : onClickPause}>
+				<CircularProgressbarWithChildren
+					maxValue={totalTime}
+					value={timeRemaining}
+					strokeWidth={1}
+					background={true}
+					styles={buildStyles({
+						strokeLinecap: "butt",
+						backgroundColor: "var(--ocean-dark)",
+						pathColor: "var(--ocean-accent)",
+						trailColor: "var(--ocean-disabled)",
+					})}>
+					{displayMessage && (sessionStatus || breakStatus) && (
+						<span className="pomodoro-app__timer-message">{displayMessage}</span>
+					)}
+					<span className="pomodoro-app__timer-value">
+						{timerMinutes()}:{timerSeconds()}
+					</span>
+					<div className="pomodoro-app__timer-button">
+						{pauseStatus ? <PlayButton /> : <PauseButton />}
 					</div>
-				</div>
-				<div className="pd-settings">
-					<div className="time-settings">
-						<span className="time-settings__headline">
-							// Set length in minutes
-						</span>
-						<div className="time-inputs">
-							<PdTimeInput
-								label={"Session:"}
-								minValue={1}
-								maxValue={60}
-								maxLength={2}
-								defValue={sessionMinutesSaved}
-								disabled={inputsDisabled}
-								onChange={(event) => {
-									setSessionMinutes(event.target.value);
-									setSessionMinutesSaved(event.target.value);
-								}}
-							/>
-							<PdTimeInput
-								label={"Break:"}
-								minValue={1}
-								maxValue={30}
-								maxLength={2}
-								defValue={breakMinutesSaved}
-								disabled={inputsDisabled}
-								onChange={(event) => {
-									setBreakMinutes(event.target.value);
-									setBreakMinutesSaved(event.target.value);
-								}}
-							/>
-						</div>
-						<SecondaryButton
-							type="reset"
-							className="time-settings__button"
-							onClick={inputsDisabled ? setInitialState : onClickPlay}
-							text={inputsDisabled ? "resetTimer()" : "startTimer()"}/>
-					</div>
-				</div>
+				</CircularProgressbarWithChildren>
 			</div>
-		</>
+
+			<div className="pomodoro-app__settings">
+				<span className="pomodoro-app__settings-headline">
+					// Set length in minutes
+				</span>
+				<form className="pomodoro-app__settings-form">
+					<Input
+						id="pomodoro-session-setting"
+						type="number"
+						label="Session:"
+						defValue={sessionMinutesSaved}
+						minValue={1}
+						maxValue={60}
+						step={1}
+						maxLength={2}
+						disabled={inputsDisabled}
+						onChange={(event) => {
+							setSessionMinutes(event.target.value);
+							setSessionMinutesSaved(event.target.value);
+						}}
+					/>
+					<Input
+						id="pomodoro-break-setting"
+						type="number"
+						label="Break:"
+						defValue={breakMinutesSaved}
+						minValue={1}
+						maxValue={30}
+						step={1}
+						maxLength={2}
+						disabled={inputsDisabled}
+						onChange={(event) => {
+							setBreakMinutes(event.target.value);
+							setBreakMinutesSaved(event.target.value);
+						}}
+					/>
+				</form>
+				<SecondaryButton
+					type="reset"
+					className="pomodoro-app__settings-button"
+					onClick={inputsDisabled ? setInitialState : onClickPlay}
+					text={inputsDisabled ? "resetTimer()" : "startTimer()"}
+				/>
+			</div>
+		</div>
 	);
 }
 
-export default PdClock;
+export default PomodoroTimer;

@@ -1,0 +1,39 @@
+.input__label {
+    width: 7rem;
+    font-family: var(--fira);
+    font-weight: 400;
+    margin-right: 2rem;
+    font-size: 1.6rem;
+    color: var(--ocean-light);    
+}
+
+.input__label_disabled {
+    color: var(--ocean-disabled-text);
+}
+
+.input__field {
+    font-family: var(--fira);
+    padding: 0.8rem 1.2rem;
+    background-color: var(--ocean-semi-dark);
+    color: var(--ocean-accent);
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 500;
+    border: none;
+    border-radius: 0.3rem;
+}
+
+.input__field:hover {
+    outline: solid var(--ocean-accent-50) 0.1rem;
+}
+
+.input__field:focus {
+    outline: solid var(--ocean-accent) 0.1rem;
+}
+
+.input__field:disabled {
+    background-color: var(--ocean-semi-dark);
+    color: var(--ocean-disabled-text);
+}
+
+

@@ -10,7 +10,7 @@ function Hero() {
             <div className="hero-descr">
                 <p className="hero-descr__paragraph">I'm a Junior Front-end developer from Belarus with a passion for learning and innovating.</p>
                 <p className="hero-descr__paragraph">Currently I'm looking for my first job as a Front-end developer.</p>
-                <p className="hero-descr__paragraph">Outside work, I'm trading cryptocurrencies, producing music and playing computer games with my friends.</p>
+                <p className="hero-descr__paragraph">Outside of work, I'm trading cryptocurrencies, producing music and playing computer games with my friends.</p>
             </div>
         </>
     )

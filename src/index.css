@@ -7,8 +7,10 @@ html {
 :root {
   --ocean-primary: #8892b0;
   --ocean-accent: #00ffbb;
-  --ocean-red: #fa8f7e;
+  --ocean-accent-50: rgb(0, 255, 187, 0.5);
+  --ocean-accent-30: rgb(0, 255, 187, 0.3);
   --ocean-accent-10: rgba(0, 255, 187, 0.1);
+  --ocean-red: #fa8f7e;
   --ocean-bg: #0C2131;
   --ocean-dark: #051218;
   --ocean-semi-dark: #0D1A24;
@@ -42,20 +44,6 @@ body {
 h1, h2, h3, h4, h5 {
   color: var(--ocean-light);
   margin: 0;
-}
-
-.container {
-  width: 144rem;
-  margin: 0 auto;
-}
-
-.section {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  padding: 150px 0;
-  max-width: 1000px;
-  margin: 0 auto;
 }
 
 .svg-icon {

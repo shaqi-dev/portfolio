@@ -1,0 +1,30 @@
+/* .checkbox {
+
+} */
+
+.checkbox__field {
+    display: inline-block;
+    vertical-align: middle;
+    height: 3.8rem;
+    width: 3.8rem;
+    background: var(--ocean-semi-dark);
+    border: var(--ocean-dark) solid 0.1rem;
+    border-radius: 0.3rem;
+    margin-right: 1.4rem;
+}
+ 
+.checkbox__field_active {
+    background: var(--ocean-accent);
+}
+
+.checkbox__field:hover {
+    outline: solid var(--ocean-accent-50) 0.1rem;
+}
+
+.checkbox__label {
+    user-select:none;
+    font-family: var(--fira);
+    font-weight: 400;
+    font-size: 1.8rem;
+    color: var(--ocean-light);    
+}

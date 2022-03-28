@@ -1,0 +1,26 @@
+.backtest-settings {
+    margin-bottom: 4rem;
+}
+
+.backtest-settings__labels {
+    display: grid;
+    grid-template-columns: 120px 200px 200px 120px;  
+    margin-bottom: 3rem;
+}
+
+.backtest-settings__labels-item {
+    font-weight: 400;
+    font-size: 2rem;
+    color: var(--ocean-light); 
+}
+
+.backtest-settings__form {
+    display: grid;
+    grid-template-columns: 120px 200px 200px 120px;
+    margin-top: 1rem;
+}
+
+.backtest-settings__form-item {
+    display: inline-block;
+    vertical-align: middle;
+}
